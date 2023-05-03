@@ -1,0 +1,223 @@
+
+      <nav>
+        <div className="nav nav-tabs" id="nav-tab" role="tablist">
+          <button
+            className={
+              selectedTab == "Catagory" ? "nav-link active" : "nav-link"
+            }
+            id="nav-home-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-home"
+            type="button"
+            role="tab"
+            aria-controls="nav-home"
+            aria-selected="true"
+            onClick={() => tabName("Catagory")}
+          >
+            Catagory
+          </button>
+          <button
+            className={selectedTab == "Wallet" ? "nav-link active" : "nav-link"}
+            id="nav-profile-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#nav-profile"
+            type="button"
+            role="tab"
+            aria-controls="nav-profile"
+            aria-selected="false"
+            onClick={() => tabName("Wallet")}
+          >
+            Wallet
+          </button>
+        </div>
+      </nav>
+
+      <div className="tab-content" id="nav-tabContent">
+        <div
+          className={
+            selectedTab == "Catagory"
+              ? "tab-pane fade show active"
+              : "tab-pane fade"
+          }
+          id="nav-home"
+          role="tabpanel"
+          aria-labelledby="nav-home-tab"
+        >
+          Catagory
+        </div>
+        <div
+          className={
+            selectedTab == "Wallet"
+              ? "tab-pane fade show active"
+              : "tab-pane fade"
+          }
+          id="nav-profile"
+          role="tabpanel"
+          aria-labelledby="nav-profile-tab"
+        >
+          Wallet
+        </div>
+      </div>
+
+      <div className="d-flex align-items-start">
+        <div
+          className="nav flex-column nav-pills me-3"
+          id="v-pills-tab"
+          role="tablist"
+          aria-orientation="vertical"
+        >
+          <button
+            className={selectedTab == "Category" ? "nav-link active" : "nav-link"}
+            id="v-pills-home-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-home"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-home"
+            aria-selected="true"
+            onClick={()=>tabName("Category")}
+          >
+            Category
+          </button>
+          <button
+            className={selectedTab == "Wallet" ? "nav-link active" : "nav-link"}
+            id="v-pills-profile-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-profile"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-profile"
+            aria-selected="false"
+            onClick={()=>tabName("Wallet")}
+          >
+            Wallet
+          </button>
+          <button
+            className={selectedTab == "Profile" ? "nav-link active" : "nav-link"}
+            id="v-pills-messages-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-messages"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-messages"
+            aria-selected="false"
+            onClick={()=>tabName("Profile")}
+          >
+            Profile
+          </button>
+        </div>
+        <div className="tab-content" id="v-pills-tabContent">
+          <div
+            className={selectedTab == "Category" ? "tab-pane fade show active" : "tab-pane fade show"}
+            id="v-pills-home"
+            role="tabpanel"
+            aria-labelledby="v-pills-home-tab"
+          >
+            Catagory
+          </div>
+          <div
+            className={selectedTab == "Wallet" ? "tab-pane fade show active" : "tab-pane fade show"}
+            id="v-pills-profile"
+            role="tabpanel"
+            aria-labelledby="v-pills-profile-tab"
+          >
+            Wallet
+          </div>
+          <div
+            className={selectedTab == "Profile" ? "tab-pane fade show active" : "tab-pane fade show"}
+            id="v-pills-messages"
+            role="tabpanel"
+            aria-labelledby="v-pills-messages-tab"
+          >
+            Profile
+          </div>
+        </div>
+      </div>
+
+      <div id="accordion">
+        <div className="card">
+          <div className="card-header" id="headingOne">
+            <h5 className="mb-0">
+              <button
+                className={selectedTab == "Category" ? "btn btn-link" : "btn btn-link collapsed"}
+                data-toggle="collapse"
+                data-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+                onClick={()=>tabName("Category")}
+              >
+                Category
+              </button>
+            </h5>
+          </div>
+
+          <div
+            id="collapseOne"
+            className={selectedTab == "Category" ? "collapse show" : "collapse"}
+            aria-labelledby="headingOne"
+            data-parent="#accordion"
+          >
+            <div className="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life
+              accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+              cupidatat skateboard dolor brunch.
+            </div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-header" id="headingTwo">
+            <h5 className="mb-0">
+              <button
+                className={selectedTab == "Wallet" ? "btn btn-link" : "btn btn-link collapsed"}
+                data-toggle="collapse"
+                data-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+                onClick={()=>tabName("Wallet")}
+              >
+                Wallet
+              </button>
+            </h5>
+          </div>
+          <div
+            id="collapseTwo"
+            className={selectedTab == "Wallet" ? "collapse show" : "collapse"}
+            aria-labelledby="headingTwo"
+            data-parent="#accordion"
+          >
+            <div className="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life
+              accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+              cupidatat skateboard dolor brunch.
+            </div>
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-header" id="headingThree">
+            <h5 className="mb-0">
+              <button
+                className={selectedTab == "Profile" ? "btn btn-link" : "btn btn-link collapsed"}
+                data-toggle="collapse"
+                data-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+                onClick={()=>tabName("Profile")}
+              >
+                Profile
+              </button>
+            </h5>
+          </div>
+          <div
+            id="collapseThree"
+            className={selectedTab == "Profile" ? "collapse show" : "collapse"}
+            aria-labelledby="headingThree"
+            data-parent="#accordion"
+          >
+            <div className="card-body">
+              Anim pariatur cliche reprehenderit, enim eiusmod high life
+              accusamus terry richardson ad squid. 3 wolf moon officia aute, non
+              cupidatat skateboard dolor brunch.
+            </div>
+          </div>
+        </div>
+      </div>
